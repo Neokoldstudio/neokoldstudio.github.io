@@ -1,4 +1,51 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = "N30's Blog"
+title = ""
+baseURL = "https://neokoldstudio.github.io"
+languageCode = "en-us"
 theme = 'ananke'
+resourceDir = "../resources"
+
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = ""
+enableRobotsTXT = true
+
+[languages]
+  [languages.en]
+    title = "N30"
+    weight = 1
+    contentDir = "content" #change to content/en if your setting up a fr section
+    # languageDirection = 'rtl' for Right-To-Left languages
+# [languages.fr]
+#  title = "N30"
+#  weight = 2
+#  contentDir = "content/fr"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  text_color = ""
+  author = "N30"
+  favicon = ""
+
+  mainSections = ["design", "gameplay","graphics", "other"]
+
+  # choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  recent_posts_number = 3
+  show_reading_time = true
+
+[[params.ananke_socials]]
+name = "twitter"
+url = "https://twitter.com/VP__Neo"
+
+[[params.ananke_socials]]
+name = "github"
+url =  "https://github.com/Neokoldstudio"
+
+[[params.ananke_socials]]
+name = "linkedin"
+url =  "https://www.linkedin.com/in/paul-godbert-a04863236/"
