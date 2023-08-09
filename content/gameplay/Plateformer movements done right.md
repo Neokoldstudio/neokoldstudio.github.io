@@ -1,11 +1,13 @@
 ---
 title: "Plateformer Movements Done Right"
 date: 2023-07-08T01:40:26+02:00
-draft: true
+featured_image: '/images/madeline_jump.png'
+katex: true
+draft: false
 ---
 
 
-![image](../../assets/img/madeline_jump.png)
+![image](/images/madeline_jump.png)
 
 # Design
 
@@ -116,7 +118,7 @@ it should corespond to most plateformers out there (at least the classic
 when creating our player object, we'd like to add some components
 
 
-![image](../../assets/img/Player_arb.png)
+![image](/images/Player_arb.png)
 
 notice how we use a RigidBody2D and a BoxCollider2D to handle collisions
 and gravity. on that very RigidBody2D you might want to block rotations on
@@ -159,7 +161,7 @@ note that the presence of \"SerializeField\" make the value tweakable
 from the editor, which comes in handy to test different parameters and
 decide which one fills the best ,which will look somewhat like this :
 
-![image](../../assets/img/settings.png)
+![image](/images/settings.png)
 
 ## Inputs
 
@@ -179,8 +181,8 @@ Vector2 playerInput;
 this code will take place in the Update method of our Player. So it will
 be updated every frame. notice how we clamped the magnitude of
 PlayerInput by one ? this is done to prevent cases where
-$PlayerInput = \overrightarrow{v}, ||\overrightarrow{v}|| > 1$ this
-happens when $\sqrt{x^{2} + y^{2}} > 1$, x being playerInput.x and y
+$$PlayerInput = \overrightarrow{v}, ||\overrightarrow{v}|| > 1$$ this
+happens when $$\sqrt{x^{2} + y^{2}} > 1$$, x being playerInput.x and y
 being playerInput.y which could cause the player to go abnormally faster
 when heading toward certain very specific directions. To avoid this, we
 normalize the direction vector.
@@ -217,7 +219,7 @@ variable).
 
 Notice the ternary opperator when assigning the value of acceleration :
 this allows us to change the level of control we have on the Player when
-mid-air. We also multiply the maxSpeedChange by $\Delta t$, which
+mid-air. We also multiply the maxSpeedChange by $$\Delta t$$, which
 prevents speed of the player to be modified during lag spikes (as it is
 now,in a way, computed relative to the frame rate).
 
