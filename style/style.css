@@ -1,0 +1,505 @@
+:root {
+  --backgroundSize: 48px;
+  --buttonColor: rgb(221, 40, 94);
+  --pageColor: aliceblue;
+}
+
+.hidden {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.custom-cursor {
+  cursor: url("../assets/images/cursor.gif"), auto;
+}
+
+h1 {
+  font-family: "PixelOperator", sans-serif;
+  font-style: bold;
+  font-weight: 100;
+}
+
+body {
+  padding-top: 100px;
+  width: 900px;
+  margin: auto;
+  font-family: "PixelOperator", sans-serif;
+  font-size: larger;
+  background-image: url("../assets/images/sky.png");
+}
+
+footer {
+  font-family: "PixelOperator", sans-serif;
+  font-size: 16px;
+  width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#aboutMeSection {
+  margin-top: 5px;
+  overflow-y: scroll;
+}
+
+#aboutMeSection::-webkit-scrollbar {
+  display: none;
+}
+
+#aboutme {
+  display: flex;
+  align-items: felx-end;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+}
+
+#portait {
+  width: 35%;
+  padding: 5px;
+}
+
+#desc {
+  width: auto;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#listening {
+  margin-top: 10px;
+  display: flex;
+  padding: 5px;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#artistName {
+  margin: auto;
+  font-family: "PixelOperator";
+  font-size: large;
+  text-align: right;
+}
+
+#trackName {
+  padding-top: 5%;
+  margin: auto;
+  padding-bottom: 5%;
+  font-family: "PixelOperator";
+  font-size: large;
+  text-align: right;
+}
+
+#listening img {
+  width: 30%;
+  height: 30%;
+  border: 2px solid black;
+}
+
+#listeningStatus {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+
+#app {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.main_logo {
+  padding-left: 22%;
+}
+
+.rightSided {
+  text-align: right;
+}
+
+.title {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+
+.tab-content {
+  margin: auto;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.navigation-tabs {
+  display: grid;
+}
+
+.tab-link-nav {
+  font-family: "PixelOperator";
+  font-size: large;
+  flex: 1;
+  text-align: center;
+  background-color: var(--buttonColor);
+  margin-bottom: 5px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.tab-content-nav {
+  margin: auto;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.navigation-tabs button {
+  display: grid;
+  height: auto;
+  justify-items: stretch;
+}
+
+.tab-content-logs {
+  margin: auto;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.tabs-content-container {
+  width: 100%;
+  height: auto;
+  background-color: var(--pageColor);
+}
+
+.tabs-content-container-logs {
+  width: 100%;
+  background-color: var(--pageColor);
+  overflow-y: scroll;
+}
+
+.tabs-content-container-logs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-link {
+  font-family: "PixelOperator";
+  font-size: large;
+  flex: 1;
+  text-align: center;
+  background-color: var(--buttonColor);
+  border-radius: 25px 25px 0 0;
+}
+
+.tab-link-logs {
+  font-family: "PixelOperator";
+  font-size: large;
+  flex: 1;
+  text-align: center;
+  background-color: var(--buttonColor);
+  border-radius: 10px 10px 0 0;
+}
+
+.tabs {
+  display: flex;
+  align-items: felx-end;
+  padding: 0;
+  margin: 0;
+  height: 40px;
+  list-style: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition-duration: 0.35s;
+}
+
+.tab-link:hover {
+  background-color: rgb(179, 171, 213);
+}
+
+.tab-link-logs:hover {
+  background-color: rgb(179, 171, 213);
+}
+
+.tab-link-nav:hover {
+  background-color: rgb(179, 171, 213);
+}
+
+.collapsible {
+  background-color: transparent;
+  font-family: "PixelOperator";
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 24px;
+}
+
+.grid-explobot {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+
+.grid-explobot img {
+  width: 100%;
+}
+
+.active,
+.collapsible:after {
+  content: "\2212";
+}
+
+.collapsible:after {
+  content: "\002B";
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsible-content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+}
+
+.box {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.display {
+  width: 100%;
+  height: auto;
+}
+
+.displayer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: auto 250px;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: auto 250px;
+  grid-template-rows: auto;
+  gap: 5px;
+}
+
+.work {
+}
+
+.navigation {
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto 250px;
+  grid-template-rows: repeat(7, auto);
+  gap: 5px;
+}
+
+.welcome {
+  grid-column: span 4 / span 4;
+  grid-row: span 4 / span 4;
+  height: 300px;
+}
+
+.status {
+  grid-row: span 3 / span 3;
+  grid-column-start: 5;
+}
+
+.div6 {
+  grid-column-start: 5;
+  grid-row-start: 6;
+  grid-row-end: 8;
+}
+
+.div7 {
+  grid-column-start: 5;
+  grid-row-start: 7;
+}
+
+.div9 {
+  grid-column: span 4 / span 4;
+  grid-column-start: 1;
+  grid-row-start: 5;
+  height: 100px;
+}
+
+.lastPlayed {
+  grid-row: span 2 / span 2;
+  grid-column-start: 5;
+  grid-row-start: 4;
+}
+
+.neighbors {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 6;
+  width: 315px;
+}
+
+.logs {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 6;
+  width: 315px;
+}
+
+@keyframes movingBackground {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: var(--backgroundSize) var(--backgroundSize);
+  }
+}
+
+@font-face {
+  font-family: "PixelOperator";
+  src: url("./fonts/PixelOperator.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PixelOperator";
+  src: url("./fonts/PixelOperatorSC-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: bold;
+}
+
+/* customizable snowflake styling */
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+}
+
+@-webkit-keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@-webkit-keyframes snowflakes-shake {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes snowflakes-shake {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.snowflake {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+  -webkit-animation-duration: 10s, 3s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s;
+}
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s;
+}
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  -webkit-animation-delay: 6s, 0.5s;
+  animation-delay: 6s, 0.5s;
+}
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s;
+}
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s;
+}
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s;
+}
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s;
+}
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s;
+}
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s;
+}
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s;
+}
