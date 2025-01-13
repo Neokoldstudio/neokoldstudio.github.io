@@ -49,6 +49,14 @@ footer {
   display: none;
 }
 
+#chattable {
+  margin-top: 0px;
+  padding-top: 0%;
+  width: 238px;
+  height: 300px;
+  border-radius: 10px 10px 5px 5px;
+}
+
 #aboutme {
   display: flex;
   align-items: felx-end;
@@ -129,6 +137,7 @@ footer {
   margin: auto;
   padding: 5px;
   border: 1px solid black;
+  border-radius: 0 0 10px 10px;
 }
 
 .navigation-tabs {
@@ -232,17 +241,6 @@ footer {
   font-size: 24px;
 }
 
-.grid-explobot {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-  gap: 5px;
-}
-
-.grid-explobot img {
-  width: 100%;
-}
-
 .active,
 .collapsible:after {
   content: "\2212";
@@ -265,9 +263,11 @@ footer {
 
 .box {
   border: 1px solid black;
+  border-style: dotted;
   width: 100%;
   height: 100%;
   padding: 5px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .display {
@@ -307,48 +307,40 @@ footer {
   grid-template-columns: auto auto auto auto 250px;
   grid-template-rows: repeat(7, auto);
   gap: 5px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .welcome {
-  grid-column: span 4 / span 4;
-  grid-row: span 4 / span 4;
-  height: 300px;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.adds {
+  grid-column-start: 5;
+  grid-row-start: 6;
+  grid-row-end: 7;
+}
+
+.chat {
+  grid-column-start: 5;
+  grid-row-start: 2;
+  grid-row-end: 6;
 }
 
 .status {
-  grid-row: span 3 / span 3;
-  grid-column-start: 5;
-}
-
-.div6 {
-  grid-column-start: 5;
-  grid-row-start: 6;
-  grid-row-end: 8;
-}
-
-.div7 {
-  grid-column-start: 5;
-  grid-row-start: 7;
-}
-
-.div9 {
-  grid-column: span 4 / span 4;
-  grid-column-start: 1;
-  grid-row-start: 5;
-  height: 100px;
-}
-
-.lastPlayed {
   grid-row: span 2 / span 2;
   grid-column-start: 5;
-  grid-row-start: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .neighbors {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
   grid-column-start: 1;
-  grid-row-start: 6;
+  grid-row-start: 4;
   width: 315px;
 }
 
@@ -356,8 +348,33 @@ footer {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
   grid-column-start: 3;
-  grid-row-start: 6;
+  grid-row-start: 4;
   width: 315px;
+}
+
+.marqueeItems {
+  width: 100%;
+  height: 31px;
+  position: relative;
+  overflow: hidden;
+}
+.marqueeItems div {
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  position: absolute;
+}
+.marqueeItems div {
+  animation: marquee ease-in-out 6s alternate infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-106%, 0);
+  }
 }
 
 @keyframes movingBackground {
