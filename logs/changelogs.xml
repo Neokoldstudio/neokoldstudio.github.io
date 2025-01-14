@@ -1,7 +1,12 @@
 <logs>
   <log>
-    <title>Update 1.0</title>
-    <description>Initial release with core features.</description>
+    <title>Update 1.0.3</title>
+    <description>added mountains and trees parallax</description>
+    <date>2025-01-13</date>
+  </log>
+  <log>
+    <title>Update 1.0.2</title>
+    <description>slight homepage rework and style adjustment, replaced the chat by something else more customisable.</description>
     <date>2025-01-12</date>
   </log>
   <log>
@@ -10,13 +15,11 @@
     <date>2025-01-12</date>
   </log>
   <log>
-    <title>Update 1.0.2</title>
-    <description>slight homepage rework and style adjustment, replaced the chat by something else more customisable.</description>
+    <title>Update 1.0</title>
+    <description>Initial release with core features.</description>
     <date>2025-01-12</date>
   </log>
-  <log>
-    <title>Update 1.0.3</title>
-    <description>added mountains and trees parallax</description>
-    <date>2025-01-13</date>
-  </log>
+
+
+
 </logs>
