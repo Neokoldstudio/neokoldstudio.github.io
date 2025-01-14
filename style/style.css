@@ -120,6 +120,47 @@ footer {
   right: 0;
 }
 
+.moutains {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 76%;
+  z-index: -10;
+}
+.moutains-image {
+  background: url("../assets/images/mountains.png") repeat-x;
+  height: 750px;
+  width: 7680px;
+  animation: slide 200s linear infinite;
+}
+
+.trees {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 80%;
+  z-index: 10;
+}
+.trees-image {
+  background: url("../assets/images/trees.png") repeat-x;
+  height: 750px;
+  width: 7680px;
+  animation: slide 50s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-3840px); /* The image width */
+  }
+}
+
 .main_logo {
   padding-left: 22%;
 }
