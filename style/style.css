@@ -128,6 +128,7 @@ footer {
   left: 0;
   top: 76%;
   z-index: -10;
+  pointer-events: none;
 }
 .moutains-image {
   background: url("../assets/images/mountains.png") repeat-x;
@@ -144,6 +145,7 @@ footer {
   left: 0;
   top: 80%;
   z-index: 10;
+  pointer-events: none;
 }
 .trees-image {
   background: url("../assets/images/trees.png") repeat-x;
