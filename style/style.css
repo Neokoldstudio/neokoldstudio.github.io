@@ -135,6 +135,7 @@ footer {
   height: 750px;
   width: 7680px;
   animation: slide 200s linear infinite;
+  pointer-events: none;
 }
 
 .trees {
@@ -152,6 +153,7 @@ footer {
   height: 750px;
   width: 7680px;
   animation: slide 50s linear infinite;
+  pointer-events: none;
 }
 
 @keyframes slide {
