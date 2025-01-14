@@ -432,6 +432,10 @@ footer {
   }
 }
 
+.done {
+  text-decoration: line-through;
+}
+
 @font-face {
   font-family: "PixelOperator";
   src: url("./fonts/PixelOperator.ttf") format("truetype");
