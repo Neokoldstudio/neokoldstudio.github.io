@@ -23,7 +23,9 @@ h1 {
 }
 
 body {
-  padding-top: 100px;
+  padding-top: 20px;
+  padding-bottom: 80px;
+
   width: 900px;
   margin: auto;
   font-family: "PixelOperator", sans-serif;
@@ -68,6 +70,7 @@ footer {
 #portait {
   width: 35%;
   padding: 5px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 #desc {
@@ -123,17 +126,15 @@ footer {
 .moutains {
   overflow: hidden;
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 7680px;
   left: 0;
-  top: 76%;
+  bottom: 0%;
   z-index: -10;
   pointer-events: none;
 }
 .moutains-image {
   background: url("../assets/images/mountains.png") repeat-x;
-  height: 750px;
-  width: 7680px;
+  height: 200px;
   animation: slide 200s linear infinite;
   pointer-events: none;
 }
@@ -141,17 +142,15 @@ footer {
 .trees {
   overflow: hidden;
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 7680px;
   left: 0;
-  top: 80%;
+  bottom: 0%;
   z-index: 10;
   pointer-events: none;
 }
 .trees-image {
   background: url("../assets/images/trees.png") repeat-x;
-  height: 750px;
-  width: 7680px;
+  height: 200px;
   animation: slide 50s linear infinite;
   pointer-events: none;
 }
@@ -166,7 +165,8 @@ footer {
 }
 
 .main_logo {
-  padding-left: 22%;
+  padding-left: 25%;
+  pointer-events: none;
 }
 
 .rightSided {
@@ -221,6 +221,7 @@ footer {
   width: 100%;
   height: auto;
   background-color: var(--pageColor);
+  border-radius: 0 0 10px 10px;
 }
 
 .tabs-content-container-logs {
