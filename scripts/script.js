@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function xmlParser() {
   let xmlContent = '';
-  console.log("test")
   fetch('../logs/changelogs.xml').then((response) => {
     response.text().then((xml) => {
       xmlContent = xml;

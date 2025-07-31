@@ -2,144 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="" viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>N30 | N30.com</title>
-    <link rel="stylesheet" href="./style/style.css">
+
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="style/snowflakes.css" />
+
     <script src="./scripts/script.js"></script>
     <script src="./js/lastfm.js"></script>
     <script src="https://chattable.neocities.org/scripts/main.min.js"></script>
-
-    <div class="snowflakes" aria-hidden="true">
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            ❄
-        </div>
-        <div class="snowflake">
-            ❅
-        </div>
-        <div class="snowflake">
-            ❆
-        </div>
-        <div class="snowflake">
-            ❄
-        </div>
-        <div class="snowflake">
-            ❄
-        </div>
-        <div class="snowflake">
-            ❅
-        </div>
-        <div class="snowflake">
-            ❆
-        </div>
-        <div class="snowflake">
-            ❄
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            ❄
-        </div>
-        <div class="snowflake">
-            ❅
-        </div>
-        <div class="snowflake">
-            ❆
-        </div>
-        <div class="snowflake">
-            ❄
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            .
-        </div>
-        <div class="snowflake">
-            ❄
-        </div>
-        <div class="snowflake">
-            ❅
-        </div>
-        <div class="snowflake">
-            ❆
-        </div>
-        <div class="snowflake">
-            ❄
-        </div>
-    </div>
-</head>
+  </head>
 
 <body>
+    <div class="snowflakes"></div>
+    <script src="scripts/snowflakes.js"></script>
 
+    <div class="background"></div>
     <header>
         <div class="tab-container">
             <h1>
-                <img src="assets\images\n30_logo.gif" class="main_logo">
+                <img src="assets/images/n30_logo.gif" class="main_logo">
             </h1>
 
             <div class=tabs>
@@ -326,8 +209,10 @@
     <div class="trees">
         <div class="trees-image"></div>
     </div>
-    <footer style="color:white">
-        N30 @ <span id="year"></span>
+    <footer>
+        <div class="footer">
+            N30 @ <span id="year"></span>
+        </div>
     </footer>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();

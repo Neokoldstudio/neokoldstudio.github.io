@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Snowflakes with Mouse Repulsion</title>
+<style>
+  body {
+    margin: 0;
+    background: #001; /* dark background to see white flakes */
+    overflow: hidden;
+  }
+  .snowflakes {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+  }
+  .snowflake {
+    position: absolute;
+    color: white;
+    font-size: 1.5em;
+    user-select: none;
+    will-change: transform;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="snowflakes"></div>
+
+<script>
+(() => {
+  const snowflakeSymbols = ['❄', '❅', '❆', '.'];
+  const maxSnowflakes = 10;
+  const snowflakes = [];
+  const container = document.querySelector('.snowflakes');
+  const mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+
+  window.addEventListener('mousemove', e => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  function createSnowflake() {
+    const el = document.createElement('div');
+    el.classList.add('snowflake');
+    el.textContent = snowflakeSymbols[Math.floor(Math.random() * snowflakeSymbols.length)];
+    container.appendChild(el);
+
+    return {
+      el,
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * -window.innerHeight,
+      speedY: Math.random() * 0.5 + 0.5,
+      drift: (Math.random() - 0.5) * 0.5,
+      wobble: Math.random() * 100,
+      size: Math.random() * 1.5 + 0.5
+    };
+  }
+
+  function updateSnowflakes() {
+    for (const flake of snowflakes) {
+      flake.y += flake.speedY;
+      flake.wobble += 0.05;
+      const wobbleX = Math.sin(flake.wobble) * 1.5;
+
+      // Mouse repulsion
+      const dx = flake.x - mouse.x;
+      const dy = flake.y - mouse.y;
+      const distSq = dx * dx + dy * dy;
+      const minDist = 100;
+      let repulseX = 0;
+      let repulseY = 0;
+
+      if (distSq < minDist * minDist) {
+        const dist = Math.sqrt(distSq) || 0.01;
+        const force = (minDist - dist) / minDist;
+        repulseX = (dx / dist) * force * 5;
+        repulseY = (dy / dist) * force * 5;
+      }
+
+      flake.x += flake.drift + wobbleX + repulseX;
+      flake.y += repulseY;
+
+      // Wrap X
+      if (flake.x < 0) flake.x += window.innerWidth;
+      if (flake.x > window.innerWidth) flake.x -= window.innerWidth;
+
+      // Reset at bottom
+      if (flake.y > window.innerHeight) {
+        flake.y = -10;
+        flake.x = Math.random() * window.innerWidth;
+        flake.wobble = Math.random() * 100;
+      }
+
+      flake.el.style.transform = `translate(${flake.x}px, ${flake.y}px) scale(${flake.size})`;
+    }
+
+    requestAnimationFrame(updateSnowflakes);
+  }
+
+  for (let i = 0; i < maxSnowflakes; i++) {
+    snowflakes.push(createSnowflake());
+  }
+
+  updateSnowflakes();
+})();
+</script>
+
+</body>
+</html>

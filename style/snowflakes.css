@@ -1,0 +1,20 @@
+.snowflakes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9;
+  overflow: hidden;
+}
+.snowflake {
+  position: absolute;
+  color: white;
+  font-size: 1em;
+  text-shadow: -1px -1px 0 rgb(78, 78, 78), 1px -1px 0 rgb(78, 78, 78),
+    -1px 1px 0 rgb(78, 78, 78), 1px 1px 0 rgb(78, 78, 78);
+  user-select: none;
+  will-change: transform;
+  pointer-events: none;
+}
